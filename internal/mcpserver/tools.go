@@ -1,4 +1,6 @@
-package main
+// Package mcpserver wires the e-Gov client into a Model Context Protocol
+// server by registering one tool per JSON endpoint.
+package mcpserver
 
 import (
 	"context"
@@ -9,7 +11,9 @@ import (
 	"github.com/piro-hiroki/e-gov-lawapi-v2/internal/egov"
 )
 
-func registerTools(server *mcp.Server, api *egov.Client) {
+// RegisterTools attaches the four e-Gov tools to the given server.
+// Pass any *egov.Client; it is invoked for each tool call.
+func RegisterTools(server *mcp.Server, api *egov.Client) {
 	mcp.AddTool(server, &mcp.Tool{
 		Name:  "search_laws",
 		Title: "法令一覧検索",

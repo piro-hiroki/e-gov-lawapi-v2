@@ -10,6 +10,7 @@ import (
 	"github.com/modelcontextprotocol/go-sdk/mcp"
 
 	"github.com/piro-hiroki/e-gov-lawapi-v2/internal/egov"
+	"github.com/piro-hiroki/e-gov-lawapi-v2/internal/mcpserver"
 )
 
 const (
@@ -27,7 +28,7 @@ func main() {
 		Version: serverVersion,
 	}, nil)
 
-	registerTools(server, egov.NewClient(&egov.Options{
+	mcpserver.RegisterTools(server, egov.NewClient(&egov.Options{
 		UserAgent: serverName + "/" + serverVersion,
 	}))
 
