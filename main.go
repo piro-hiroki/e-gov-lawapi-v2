@@ -8,6 +8,8 @@ import (
 	"syscall"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
+
+	"github.com/piro-hiroki/e-gov-lawapi-v2/internal/egov"
 )
 
 const (
@@ -25,7 +27,9 @@ func main() {
 		Version: serverVersion,
 	}, nil)
 
-	registerTools(server, newAPIClient())
+	registerTools(server, egov.NewClient(&egov.Options{
+		UserAgent: serverName + "/" + serverVersion,
+	}))
 
 	ctx, stop := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer stop()
