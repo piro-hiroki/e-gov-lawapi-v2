@@ -1,0 +1,5 @@
+/e-gov-mcp
+*.log
+.DS_Store
+.env
+.env.local
