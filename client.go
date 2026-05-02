@@ -14,7 +14,7 @@ import (
 
 const (
 	baseURL   = "https://laws.e-gov.go.jp/api/2"
-	userAgent = "e-gov-mcp/0.1.0"
+	userAgent = "e-gov-lawapi-v2/0.1.0"
 )
 
 type apiClient struct {

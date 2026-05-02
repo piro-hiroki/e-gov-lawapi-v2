@@ -1,4 +1,4 @@
-module github.com/piro-hiroki/e-gov-mcp
+module github.com/piro-hiroki/e-gov-lawapi-v2
 
 go 1.26.2
 

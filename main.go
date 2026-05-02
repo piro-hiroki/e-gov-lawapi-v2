@@ -11,13 +11,13 @@ import (
 )
 
 const (
-	serverName    = "e-gov-mcp"
+	serverName    = "e-gov-lawapi-v2"
 	serverVersion = "0.1.0"
 )
 
 func main() {
 	log.SetFlags(0)
-	log.SetPrefix("e-gov-mcp: ")
+	log.SetPrefix(serverName + ": ")
 	log.SetOutput(os.Stderr)
 
 	server := mcp.NewServer(&mcp.Implementation{

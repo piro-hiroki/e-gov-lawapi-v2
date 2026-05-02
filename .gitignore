@@ -1,4 +1,4 @@
-/e-gov-mcp
+/e-gov-lawapi-v2
 *.log
 .DS_Store
 .env
